@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Google Auth Demo</title>
+  <meta name="google-signin-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com">
+  <script src="https://apis.google.com/js/platform.js" async defer></script>
+</head>
+<body>
+
+  <h1>Welcome to the Demo</h1>
+  <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
+  <script>
+    function onSignIn(googleUser) {
+      // get user profile information
+      console.log("Profile")
+      console.log(googleUser.getBasicProfile())
+
+      // get user profile as an ID Token, or JWT Token
+      console.log(googleUser.getAuthResponse().id_token)
+    }
+  </script>
+</body>
+</html>
