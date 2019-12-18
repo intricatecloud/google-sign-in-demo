@@ -40,7 +40,7 @@ class App extends Component {
         width: 200,
         height: 50,
         client_id: 'YOUR_CLIENT_ID.apps.googleusercontent.com',
-        onSuccess: successCallback
+        onsuccess: successCallback
       }
       gapi.signin2.render('loginButton', opts)
     })
